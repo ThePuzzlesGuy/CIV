@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Civ Faction Tracker</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Track factions and players remaining in a Minecraft civilization event."/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Faction Tracker</h1>
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="Search factions or players…" autocomplete="off">
+      <button id="clearSearch" aria-label="Clear search">×</button>
+    </div>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="site-footer">
+    <p>Update rosters by editing <code>data/factions.json</code> in GitHub. Deployed on Netlify.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

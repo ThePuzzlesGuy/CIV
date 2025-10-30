@@ -1,0 +1,79 @@
+{
+  "factions": [
+    {
+      "name": "The Peak",
+      "slug": "the-peak",
+      "players": []
+    },
+    {
+      "name": "HD Clan",
+      "slug": "hd-clan",
+      "players": []
+    },
+    {
+      "name": "Greeko Boys",
+      "slug": "greeko-boys",
+      "players": []
+    },
+    {
+      "name": "Men in Suits",
+      "slug": "men-in-suits",
+      "players": []
+    },
+    {
+      "name": "Civ Event Veterans",
+      "slug": "civ-event-veterans",
+      "players": []
+    },
+    {
+      "name": "Goober Bay",
+      "slug": "goober-bay",
+      "players": []
+    },
+    {
+      "name": "The Pharaonate",
+      "slug": "the-pharaonate",
+      "players": []
+    },
+    {
+      "name": "Ironcrest Clan",
+      "slug": "ironcrest-clan",
+      "players": []
+    },
+    {
+      "name": "Boys Next Door",
+      "slug": "boys-next-door",
+      "players": []
+    },
+    {
+      "name": "F.U.N. Fellas",
+      "slug": "fun-fellas",
+      "players": []
+    },
+    {
+      "name": "Th Archivists Libary",
+      "slug": "th-archivists-libary",
+      "players": []
+    },
+    {
+      "name": "The Blue Order",
+      "slug": "the-blue-order",
+      "players": []
+    },
+    {
+      "name": "Domnul University",
+      "slug": "domnul-university",
+      "players": []
+    },
+    {
+      "name": "DUDE CITY",
+      "slug": "dude-city",
+      "players": []
+    },
+    {
+      "name": "The Egalitarian Order",
+      "slug": "the-egalitarian-order",
+      "players": []
+    }
+  ]
+}
