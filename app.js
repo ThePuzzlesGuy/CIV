@@ -60,7 +60,6 @@ async function loadData() {
         <h3>${f.name}</h3>
         <div class="meta">
           <span class="badge">${playerCount} player${playerCount===1?'':'s'}</span>
-          <span class="badge">slug: ${f.slug}</span>
         </div>
       </article>`;
     }).join('');
@@ -104,7 +103,7 @@ async function loadData() {
       <section class="stack">
         <h2>${faction.name}</h2>
         ${faction.players.length ? `<div class="player-list">${players}</div>`
-          : `<p class="empty">No players listed yet. Add usernames in <code>data/factions.json</code> under <b>${faction.name}</b>.</p>`}
+          : `<p class="empty">No players listed yet.</b>.</p>`}
       </section>`;
   }
 
