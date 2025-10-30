@@ -23,18 +23,27 @@ const App = (() => {
   const avatarUrl = (username, size=64) =>
     `https://mc-heads.net/avatar/${encodeURIComponent(username)}/${size}.png`;
 
-  async function loadData() {
-    const res = await fetch('data/factions.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('Failed to load factions.json');
-    const data = await res.json();
+async function loadData() {
+  const res = await fetch('data/factions.json', { cache: 'no-store' });
+  if (!res.ok) throw new Error('Failed to load factions.json');
+  const data = await res.json();
 
-    // Normalize & ensure slugs
-    state.factions = data.factions.map(f => ({
-      name: f.name,
-      slug: f.slug || slugify(f.name),
-      players: Array.isArray(f.players) ? f.players : []
-    }));
-  }
+  // Normalize & ensure slugs; convert string players → { username }
+  state.factions = data.factions.map(f => ({
+    name: f.name,
+    slug: f.slug || slugify(f.name),
+    players: Array.isArray(f.players)
+      ? f.players
+          .map(p => {
+            if (typeof p === 'string') return { username: p.trim() };
+            // also accept { name: "…" } shape
+            if (p && typeof p === 'object') return { username: (p.username || p.name || '').trim() };
+            return null;
+          })
+          .filter(p => p && p.username) // drop empties
+      : []
+  }));
+}
 
   function homeView() {
     const q = (state.filtered ?? '').trim().toLowerCase();
