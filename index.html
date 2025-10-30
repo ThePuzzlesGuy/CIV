@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CivDex — Factions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-950 text-neutral-100">
+  <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+    <h1 class="text-2xl font-bold">CivDex</h1>
+    <nav class="flex gap-4 text-sm">
+      <a href="/admin.html" class="underline/50 hover:underline">Admin</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <div class="mb-6 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+      <input id="search" placeholder="Search factions..." class="flex-1 rounded-xl px-4 py-2 bg-neutral-800/70 border border-neutral-700 outline-none" />
+      <select id="tagFilter" class="rounded-xl px-4 py-2 bg-neutral-800/70 border border-neutral-700">
+        <option value="">All tags</option>
+      </select>
+    </div>
+
+    <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+  </main>
+
+  <!-- Drawer -->
+  <div id="drawer" class="fixed inset-0 hidden">
+    <div class="absolute inset-0 bg-black/60" id="drawerBackdrop"></div>
+    <div class="absolute right-0 top-0 h-full w-full sm:w-[36rem] bg-neutral-900 border-l border-neutral-800 overflow-y-auto">
+      <div class="p-6 flex items-start justify-between gap-4 border-b border-neutral-800">
+        <div>
+          <h2 id="drawerTitle" class="text-xl font-bold"></h2>
+          <p id="drawerNote" class="text-sm text-neutral-400"></p>
+        </div>
+        <button id="drawerClose" class="px-3 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700">Close</button>
+      </div>
+      <div id="drawerBody" class="p-6"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
